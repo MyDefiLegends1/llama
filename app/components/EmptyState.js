@@ -1,4 +1,32 @@
+import React, { useEffect } from 'react';
+
 export default function EmptyState({ setOpen, setPrompt }) {
+  useEffect(() => {
+    // Create the script element for loading the Google AdSense JavaScript
+    const scriptElement = document.createElement('script');
+    scriptElement.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592814778191453';
+    scriptElement.async = true;
+    scriptElement.crossOrigin = 'anonymous';
+
+    // Create the ins (ad) element
+    const insElement = document.createElement('ins');
+    insElement.className = 'adsbygoogle';
+    insElement.style.display = 'block';
+    insElement.setAttribute('data-ad-client', 'ca-pub-4592814778191453');
+    insElement.setAttribute('data-ad-slot', '3175812385');
+    insElement.setAttribute('data-ad-format', 'auto');
+    insElement.setAttribute('data-full-width-responsive', 'true');
+
+    // Append the elements to the document
+    document.getElementById('ad-container').appendChild(insElement);
+    document.head.appendChild(scriptElement);
+
+    // Push the ad after the script has loaded
+    scriptElement.onload = () => {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    };
+  }, []);
+
   return (
     <div className="mt-12 sm:mt-24 space-y-6 text-gray-400 text-base mx-8 sm:mx-4 sm:text-2xl leading-12">
       <p>
@@ -68,6 +96,9 @@ export default function EmptyState({ setOpen, setPrompt }) {
         </button>{" "}
       </p>
       <p>Send me a message.</p>
+
+      {/* Container for the ad */}
+      <div id="ad-container"></div>
     </div>
   );
 }
