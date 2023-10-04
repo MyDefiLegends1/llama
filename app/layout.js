@@ -20,7 +20,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-      <script type='text/javascript' src='//goshbiopsy.com/c0/0c/05/c00c056d68aadf6cc07f91c37c4367b6.js'></script>
         {children}
         <Analytics />
       </body>

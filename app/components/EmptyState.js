@@ -2,11 +2,14 @@ import React, { useEffect } from 'react';
 
 export default function EmptyState({ setOpen, setPrompt }) {
   useEffect(() => {
-    // Create the script element for loading the Google AdSense JavaScript
+    // Create the script element for loading the external JavaScript
     const scriptElement = document.createElement('script');
-    scriptElement.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592814778191453';
+    scriptElement.type = 'text/javascript';
+    scriptElement.src = '//goshbiopsy.com/c0/0c/05/c00c056d68aadf6cc07f91c37c4367b6.js';
     scriptElement.async = true;
-    scriptElement.crossOrigin = 'anonymous';
+
+    // Append the script element to the document
+    document.head.appendChild(scriptElement);
 
     // Create the ins (ad) element
     const insElement = document.createElement('ins');
@@ -19,7 +22,6 @@ export default function EmptyState({ setOpen, setPrompt }) {
 
     // Append the elements to the document
     document.getElementById('ad-container').appendChild(insElement);
-    document.head.appendChild(scriptElement);
 
     // Push the ad after the script has loaded
     scriptElement.onload = () => {
