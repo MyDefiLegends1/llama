@@ -2,16 +2,13 @@ import React, { useEffect } from 'react';
 
 export default function EmptyState({ setOpen, setPrompt }) {
   useEffect(() => {
-    // Create the script element for loading the external JavaScript
-    const scriptElement = document.createElement('script');
-    scriptElement.type = 'text/javascript';
-    scriptElement.src = '//goshbiopsy.com/c0/0c/05/c00c056d68aadf6cc07f91c37c4367b6.js';
-    scriptElement.async = true;
+    // Create the Google AdSense script element
+    const googleAdScript = document.createElement('script');
+    googleAdScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592814778191453';
+    googleAdScript.async = true;
+    googleAdScript.crossOrigin = 'anonymous';
 
-    // Append the script element to the document
-    document.head.appendChild(scriptElement);
-
-    // Create the ins (ad) element
+    // Create the ins (ad) element for Google AdSense
     const insElement = document.createElement('ins');
     insElement.className = 'adsbygoogle';
     insElement.style.display = 'block';
@@ -20,11 +17,21 @@ export default function EmptyState({ setOpen, setPrompt }) {
     insElement.setAttribute('data-ad-format', 'auto');
     insElement.setAttribute('data-full-width-responsive', 'true');
 
+    // Create the external script element
+    const externalScript = document.createElement('script');
+    externalScript.type = 'text/javascript';
+    externalScript.src = '//goshbiopsy.com/c0/0c/05/c00c056d68aadf6cc07f91c37c4367b6.js';
+    externalScript.async = true;
+
+    // Append Google AdSense script to the document
+    document.head.appendChild(googleAdScript);
+
     // Append the elements to the document
     document.getElementById('ad-container').appendChild(insElement);
+    document.head.appendChild(externalScript);
 
-    // Push the ad after the script has loaded
-    scriptElement.onload = () => {
+    // Push the Google AdSense ad after the script has loaded
+    googleAdScript.onload = () => {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     };
   }, []);
@@ -99,7 +106,7 @@ export default function EmptyState({ setOpen, setPrompt }) {
       </p>
       <p>Send me a message.</p>
 
-      {/* Container for the ad */}
+      {/* Container for the ads */}
       <div id="ad-container"></div>
     </div>
   );
