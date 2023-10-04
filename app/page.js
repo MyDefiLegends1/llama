@@ -38,13 +38,13 @@ export default function HomePage() {
   const [error, setError] = useState(null);
 
   //   Llama params
-  const [size, setSize] = useState(VERSIONS[2]); // default to 70B
+  const [size, setSize] = useState(VERSIONS[0]); // default to 70B
   const [systemPrompt, setSystemPrompt] = useState(
-    "You are a helpful assistant."
+    "You are a helpful assistant named bingblong."
   );
   const [temp, setTemp] = useState(0.75);
-  const [topP, setTopP] = useState(0.9);
-  const [maxTokens, setMaxTokens] = useState(800);
+  const [topP, setTopP] = useState(0.5);
+  const [maxTokens, setMaxTokens] = useState(2048);
 
   const { complete, completion, setInput, input } = useCompletion({
     api: "/api",
@@ -128,13 +128,13 @@ export default function HomePage() {
   return (
     <>
       <div className="bg-slate-100 border-b-2 text-center p-3">
-        Powered by Replicate.{" "}
+        Powered by Bingblong.{" "}
         <a
-          href="https://replicate.com/blog/run-llama-2-with-an-api?utm_source=project&utm_campaign=llama2ai"
+          href="https://app.bingblong.com"
           target="_blank"
           className="underline"
         >
-          Run and fine-tune Llama 2 in the cloud.
+          Go to google search app.bingblong.com
         </a>
       </div>
       <nav className="grid grid-cols-2 pt-3 pl-6 pr-3 sm:grid-cols-3 sm:pl-0">
@@ -151,13 +151,13 @@ export default function HomePage() {
         <div className="flex justify-end">
           <a
             className="inline-flex items-center px-3 py-2 mr-3 text-sm font-semibold text-gray-700 bg-white rounded-md shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-            href="https://github.com/replicate/chat"
+            href="https://bingblong.com"
           >
             <CodeBracketIcon
               className="w-5 h-5 text-gray-500 sm:mr-2 group-hover:text-gray-900"
               aria-hidden="true"
             />{" "}
-            <span className="hidden sm:inline">Clone on GitHub</span>
+            <span className="hidden sm:inline">FREE OF USE</span>
           </a>
           <button
             type="button"
