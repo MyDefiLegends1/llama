@@ -40,7 +40,7 @@ export default function HomePage() {
   //   Llama params
   const [size, setSize] = useState(VERSIONS[0]); // default to 70B
   const [systemPrompt, setSystemPrompt] = useState(
-    "You are a helpful assistant named bingblong.Act like a teacher"
+    "You are a helpful assistant named bingblong.Act like a teacher named bingblong.Make sure that the outputs are likely human generated. Dont add gestures in the outputs like *adjusts glasses*"
   );
   const [temp, setTemp] = useState(0.75);
   const [topP, setTopP] = useState(0.5);
