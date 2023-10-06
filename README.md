@@ -1,4 +1,4 @@
-# Llama Chat 🦙
+# Llama Chat 🤖
 
 This is a [Next.js](https://nextjs.org/) app that demonstrates how to build a chat UI using the [Llama 2](https://replicate.com/replicate/llama70b-v2-chat) language model and Replicate's [streaming API (private beta)](https://replicate.com/docs/streaming).
 

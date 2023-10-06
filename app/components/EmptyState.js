@@ -40,7 +40,7 @@ export default function EmptyState({ setOpen, setPrompt }) {
     <div className="mt-12 sm:mt-24 space-y-6 text-gray-400 text-base mx-8 sm:mx-4 sm:text-2xl leading-12">
       <p>
         {" "}
-        Customize Llama&apos;s personality by clicking the{" "}
+        Change Bing&apos;s smart level by clicking the{" "}
         <button
           className="prompt-button inline-flex items-center "
           onClick={() => setOpen(true)}
@@ -104,7 +104,8 @@ export default function EmptyState({ setOpen, setPrompt }) {
           name your pets.
         </button>{" "}
       </p>
-      <p>Send me a message.</p>
+      <p>Bing response time is 1-10 seconds</p>
+      <p>It depends on your question length</p>
 
       {/* Container for the ads */}
       <div id="ad-container"></div>

@@ -14,19 +14,19 @@ function approximateTokenCount(text) {
 
 const VERSIONS = [
   {
-    name: "Llama 2 7B",
-    version: "d24902e3fa9b698cc208b5e63136c4e26e828659a9f09827ca6ec5bb83014381",
-    shortened: "7B",
+    name: "Bing Low",
+    version: "8e6975e5ed6174911a6ff3d60540dfd4844201974602551e10e9e87ab143d81e",
+    shortened: "Low-Fastest",
   },
   {
-    name: "Llama 2 13B",
-    version: "9dff94b1bed5af738655d4a7cbcdcde2bd503aa85c94334fe1f42af7f3dd5ee3",
-    shortened: "13B",
+    name: "Bing Mid",
+    version: "f4e2de70d66816a838a89eeeb621910adffb0dd0baba3976c96980970978018d",
+    shortened: "Mid-Faster",
   },
   {
-    name: "Llama 2 70B",
-    version: "2796ee9483c3fd7aa2e171d38f4ca12251a30609463dcfd4cd76703f22e96cdf",
-    shortened: "70B",
+    name: "Bing High",
+    version: "02e509c789964a7ea8736978a43525956ef40397be9033abf9fd2badfe68c9e3",
+    shortened: "High-Fast",
   },
 ];
 
@@ -140,12 +140,12 @@ export default function HomePage() {
       <nav className="grid grid-cols-2 pt-3 pl-6 pr-3 sm:grid-cols-3 sm:pl-0">
         <div className="hidden sm:inline-block"></div>
         <div className="font-semibold text-gray-500 sm:text-center">
-          🦙 <span className="hidden sm:inline-block">Chat with</span>{" "}
+          🤖 <span className="hidden sm:inline-block">Chat with</span>{" "}
           <button
             className="py-2 font-semibold text-gray-500 hover:underline"
             onClick={() => setOpen(true)}
           >
-            Llama 2 {size.shortened}
+            Bing {size.shortened}
           </button>
         </div>
         <div className="flex justify-end">
