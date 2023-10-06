@@ -134,8 +134,9 @@ export default function HomePage() {
           target="_blank"
           className="underline"
         >
-          Go to google search app.bingblong.com
+          Go to google search app.bingblong.com 
         </a>
+        <a> Not replying? Bing response time is 1-10 seconds</a>
       </div>
       <nav className="grid grid-cols-2 pt-3 pl-6 pr-3 sm:grid-cols-3 sm:pl-0">
         <div className="hidden sm:inline-block"></div>
