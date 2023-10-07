@@ -128,7 +128,7 @@ export default function HomePage() {
   return (
     <>
       <div className="bg-slate-100 border-b-2 text-center p-3">
-        Powered by Bingblong.{" "}
+        Not working?.{" "}
         <a
           href="https://ask.bingblong.com"
           target="_blank"
