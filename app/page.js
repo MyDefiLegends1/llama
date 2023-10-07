@@ -130,11 +130,11 @@ export default function HomePage() {
       <div className="bg-slate-100 border-b-2 text-center p-3">
         Powered by Bingblong.{" "}
         <a
-          href="https://app.bingblong.com"
+          href="https://ask.bingblong.com"
           target="_blank"
           className="underline"
         >
-          Go to google search app.bingblong.com 
+          Go to google search ask.bingblong.com 
         </a>
         <a> Not replying? Bing response time is 1-10 seconds</a>
       </div>
