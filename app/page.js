@@ -212,6 +212,7 @@ export default function HomePage() {
           <Message message={completion} isUser={false} />
           <div ref={bottomRef} />
         </article>
+        
       </main>
     </>
   );

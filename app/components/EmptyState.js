@@ -34,6 +34,12 @@ export default function EmptyState({ setOpen, setPrompt }) {
     googleAdScript.onload = () => {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     };
+
+    // Add Google Analytics tracking code
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1V3JXRWZ4K'); // Replace 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID' with your actual tracking ID
   }, []);
 
   return (
