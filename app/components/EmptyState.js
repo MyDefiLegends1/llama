@@ -17,6 +17,14 @@ export default function EmptyState({ setOpen, setPrompt }) {
     insElement.setAttribute('data-ad-format', 'auto');
     insElement.setAttribute('data-full-width-responsive', 'true');
 
+    const insElements = document.createElement('ins');
+    insElements.className = 'adsbygoogle';
+    insElements.style.display = 'block';
+    insElements.setAttribute('data-ad-client', 'ca-pub-4592814778191453');
+    insElements.setAttribute('data-ad-slot', '6061608401');
+    insElements.setAttribute('data-ad-format', 'auto');
+    insElements.setAttribute('data-full-width-responsive', 'true');
+
     // Create the external script element
     const externalScript = document.createElement('script');
     externalScript.type = 'text/javascript';
