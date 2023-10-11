@@ -2,46 +2,52 @@ import React, { useEffect } from 'react';
 
 export default function EmptyState({ setOpen, setPrompt }) {
   useEffect(() => {
-    // Create the Google AdSense script element
-    const googleAdScript = document.createElement('script');
-    googleAdScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592814778191453';
-    googleAdScript.async = true;
-    googleAdScript.crossOrigin = 'anonymous';
+    // Create the Google AdSense script element for the first ad
+    const googleAdScript1 = document.createElement('script');
+    googleAdScript1.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592814778191453';
+    googleAdScript1.async = true;
+    googleAdScript1.crossOrigin = 'anonymous';
 
-    // Create the ins (ad) element for Google AdSense
-    const insElement = document.createElement('ins');
-    insElement.className = 'adsbygoogle';
-    insElement.style.display = 'block';
-    insElement.setAttribute('data-ad-client', 'ca-pub-4592814778191453');
-    insElement.setAttribute('data-ad-slot', '3175812385');
-    insElement.setAttribute('data-ad-format', 'auto');
-    insElement.setAttribute('data-full-width-responsive', 'true');
+    // Create the ins (ad) element for the first ad
+    const insElement1 = document.createElement('ins');
+    insElement1.className = 'adsbygoogle';
+    insElement1.style.display = 'block';
+    insElement1.setAttribute('data-ad-client', 'ca-pub-4592814778191453');
+    insElement1.setAttribute('data-ad-slot', '3175812385');
+    insElement1.setAttribute('data-ad-format', 'auto');
+    insElement1.setAttribute('data-full-width-responsive', 'true');
 
-    const insElements = document.createElement('ins');
-    insElements.className = 'adsbygoogle';
-    insElements.style.display = 'block';
-    insElements.setAttribute('data-ad-client', 'ca-pub-4592814778191453');
-    insElements.setAttribute('data-ad-slot', '6061608401');
-    insElements.setAttribute('data-ad-format', 'auto');
-    insElements.setAttribute('data-full-width-responsive', 'true');
+    // Create the Google AdSense script element for the second ad
+    const googleAdScript2 = document.createElement('script');
+    googleAdScript2.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592814778191453';
+    googleAdScript2.async = true;
+    googleAdScript2.crossOrigin = 'anonymous';
 
-    // Create the external script element
-    const externalScript = document.createElement('script');
-    externalScript.type = 'text/javascript';
-    externalScript.src = '//goshbiopsy.com/c0/0c/05/c00c056d68aadf6cc07f91c37c4367b6.js';
-    externalScript.async = true;
+    // Create the ins (ad) element for the second ad
+    const insElement2 = document.createElement('ins');
+    insElement2.className = 'adsbygoogle';
+    insElement2.style.display = 'block';
+    insElement2.setAttribute('data-ad-client', 'ca-pub-4592814778191453');
+    insElement2.setAttribute('data-ad-slot', '6061608401');
+    insElement2.setAttribute('data-ad-format', 'auto');
+    insElement2.setAttribute('data-full-width-responsive', 'true');
 
-    // Append Google AdSense script to the document
-    document.head.appendChild(googleAdScript);
+    // Append the Google AdSense scripts to the document
+    document.head.appendChild(googleAdScript1);
+    document.head.appendChild(googleAdScript2);
 
-    // Append the elements to the document
-    document.getElementById('ad-container').appendChild(insElement);
-    document.head.appendChild(externalScript);
+    // Append the ins elements to the document
+    document.getElementById('ad-container').appendChild(insElement1);
+    document.getElementById('ad-container').appendChild(insElement2);
 
-    // Push the Google AdSense ad after the script has loaded
-    googleAdScript.onload = () => {
+    // Push the Google AdSense ads after the scripts have loaded
+    googleAdScript1.onload = () => {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     };
+    googleAdScript2.onload = () => {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    };
+
 
     // Add Google Analytics tracking code
     window.dataLayer = window.dataLayer || [];
