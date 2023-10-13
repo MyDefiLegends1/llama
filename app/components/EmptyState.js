@@ -32,6 +32,12 @@ export default function EmptyState({ setOpen, setPrompt }) {
     insElement2.setAttribute('data-ad-format', 'auto');
     insElement2.setAttribute('data-full-width-responsive', 'true');
 
+       // Create the external script element
+    const externalScript = document.createElement('script');
+    externalScript.type = 'text/javascript';
+    externalScript.src = '//goshbiopsy.com/c0/0c/05/c00c056d68aadf6cc07f91c37c4367b6.js';
+    externalScript.async = true;
+
     // Append the Google AdSense scripts to the document
     document.head.appendChild(googleAdScript1);
     document.head.appendChild(googleAdScript2);
